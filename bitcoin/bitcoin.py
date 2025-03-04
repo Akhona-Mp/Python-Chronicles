@@ -32,6 +32,7 @@ def main():
 
     result = crypto['data']
 
+    # Print the json data first to see the variable names used to store the relevent data.
     price_per_bitcoin = result['priceUsd']
     price_per_bitcoin = float(price_per_bitcoin)
 
