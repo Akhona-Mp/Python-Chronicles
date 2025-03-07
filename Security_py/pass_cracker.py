@@ -1,6 +1,8 @@
 import time
+import pwinput
 
-password = input("Enter Password: ")
+# Allows user to input password without it being shown.
+password = pwinput.pwinput("Enter Password: ")
 start = time.time()
 chars = "qwertyuioplkjhgfdsazxcvbnm"
 
