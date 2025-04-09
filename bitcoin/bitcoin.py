@@ -42,7 +42,7 @@ def main():
     amount = float(amount)
 
     print(f"The current price of bitcoin is: ${price_per_bitcoin}")
-    print(f"> {quantity} bitcoin,are worth: ${amount:,.4f}")
+    print(f"> {quantity} bitcoin,is worth: ${amount:,.4f}")
 
 if __name__ == "__main__":
     main()
