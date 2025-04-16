@@ -30,8 +30,12 @@ def main():
     crypto = response.json()
     # print(crypto)
 
-    result = crypto['data'][0]
-    # result = result["bitcoin"]
+    result = crypto['data']
+    
+    for item in result:
+        if item["id"].lower() == "bitcoin":
+            result = item
+
     # print(result)
 
     # Print the json data first to see the variable names used to store the relevent data.
