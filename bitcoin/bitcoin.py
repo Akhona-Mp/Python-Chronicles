@@ -21,7 +21,7 @@ def main():
 
     try:
         response = requests.get(
-            "https://api.coincap.io/v2/assets/bitcoin" 
+            "https://rest.coincap.io/v3/assets?apiKey=25e7df87f412e38795ac691c4fe01b11d306707bdb1145f1b30fdad64090d2a7" 
         )
         response.raise_for_status()
     except requests.RequestException:
@@ -30,7 +30,9 @@ def main():
     crypto = response.json()
     # print(crypto)
 
-    result = crypto['data']
+    result = crypto['data'][0]
+    # result = result["bitcoin"]
+    # print(result)
 
     # Print the json data first to see the variable names used to store the relevent data.
     price_per_bitcoin = result['priceUsd']
